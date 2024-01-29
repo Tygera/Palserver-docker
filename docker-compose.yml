@@ -1,0 +1,12 @@
+version: '3'
+services:
+  palserver:
+    image: palserver-debian
+    ports:
+      - "8211:8211/udp"
+      - "8211:8211/tcp"
+    volumes:
+      - palworld_save:/home/steam/.steam/steam/steamapps/common/PalServer/Pal/Saved
+
+volumes:
+  palworld_save:
